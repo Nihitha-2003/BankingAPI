@@ -1,0 +1,23 @@
+<h2>Beneficiaries List</h2>
+<table border="1">
+  <tr>
+    <th>Nickname</th>
+    <th>Account Number</th>
+    <th>Bank</th>
+    <th>IFSC</th>
+    <th>Status</th>
+    <th>createdAt</th>
+  </tr>
+  <tr *ngFor="let b of beneficiaries">
+    <td>{{b.nickName}}</td>
+    <td>{{b.accountNumber}}</td>
+    <td>{{b.bankName}}</td>
+    <td>{{b.ifsc}}</td>
+    <td>{{b.status}}</td>
+    <td>{{b.createdAt}}</td>
+    <td>
+      <button *ngIf="b.status=='Pending'" (click)="approve(b.beneficiaryId!)">Approve</button>
+      <button *ngIf="b.status=='Pending'" (click)="reject(b.beneficiaryId!)">Reject</button>
+    </td>
+  </tr>
+</table>

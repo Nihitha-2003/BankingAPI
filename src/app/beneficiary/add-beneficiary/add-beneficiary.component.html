@@ -1,0 +1,41 @@
+<div class="form-wrapper">
+  
+ 
+  <div class="brand-header">
+    <h1>ZigmaBanking</h1>
+  </div>
+
+ 
+  <div class="form-card">
+    <h2>Add Beneficiary</h2>
+    <form (ngSubmit)="submit()" class="beneficiary-form">
+
+      <div class="form-group">
+        <label for="nickName">Nickname</label>
+        <input id="nickName" [(ngModel)]="beneficiary.nickName" name="nickName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="accountNumber">Account Number</label>
+        <input id="accountNumber" [(ngModel)]="beneficiary.accountNumber" name="accountNumber" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bankName">Bank Name</label>
+        <input id="bankName" [(ngModel)]="beneficiary.bankName" name="bankName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ifsc">IFSC</label>
+        <input id="ifsc" [(ngModel)]="beneficiary.ifsc" name="ifsc" required>
+      </div>
+
+      <div class="form-group">
+        <label for="customerCRN">Customer CRN</label>
+        <input id="customerCRN" [(ngModel)]="beneficiary.customerCRN" name="customerCRN" required>
+      </div>
+
+      <button type="submit" class="submit-btn"> Add Beneficiary</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+/* app.component.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: rgba(47, 29, 47, 0.85);
+  color: #fff;
+}
+
+/* Navbar stretches full width */
+.nav-bar {
+  display: flex;
+  justify-content: center; /* centers buttons horizontally */
+  gap: 20px;
+  padding: 15px 0;
+  background-color: #515662;
+  border-bottom: 2px solid #615061;
+  width: 100%; /* full width */
+  box-sizing: border-box;
+}
+
+/* Buttons inside navbar */
+.nav-button {
+  text-decoration: none;
+  padding: 10px 25px;
+  background: #615061;
+  color: #fff;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: bold;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background: #515662;
+  transform: scale(1.05);
+}
+
+/* Make navbar responsive */
+@media (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column; /* stack buttons on small screens */
+    gap: 10px;
+  }
+}
